@@ -19,19 +19,20 @@ Posted DataForSEO task IDs are saved in `state/` before polling starts. If a run
 ```bash
 git clone <this repo> ~/rank-tracker && cd ~/rank-tracker
 cp config.example.json config.json   # set sync_exports_dir and vault_dir
-cp .env.example .env                 # DataForSEO login, plus the SP-API app creds the sync already uses
-chmod 600 .env
+./setup-keys.sh                      # stores the DataForSEO API login/password in the Keychain
 ```
 
+Secrets are read from the macOS Keychain by `env.sh`. The SP-API keys are the ones the
+amazon-sp-api-mcp sync already stores (service `amazon-sp-api-mcp`), so nothing is copied.
 The SP-API app needs the **Brand Analytics** role for the SQP report.
 
 Check it before scheduling:
 
 ```bash
-source .env
+source env.sh
 python3 -m rank_tracker sqp                    # fetch SQP only, free
 python3 -m rank_tracker run --dry-run          # list chosen keywords and task count, no spend
-python3 -m rank_tracker smoke "cork belt"      # one paid search, roughly a fraction of a cent; prints response shape
+python3 -m rank_tracker smoke "cork belt"      # one paid search; prints response shape
 python3 -m rank_tracker run                    # full run
 ```
 
