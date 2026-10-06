@@ -1,0 +1,15 @@
+{
+  "sync_exports_dir": "~/Library/CloudStorage/GoogleDrive-greg.myles@yem-uk.com/My Drive/AmazonSyncExports",
+  "vault_dir": "~/PATH/TO/ObsidianVault",
+  "vault_subfolder": "Amazon/Rank Tracker",
+  "state_dir": "state",
+  "marketplace_id": "A1F83G8C2ARO7P",
+  "se_domain": "amazon.co.uk",
+  "location_code": 2826,
+  "language_code": "en_GB",
+  "sqp_weeks": 4,
+  "keywords_per_asin": 5,
+  "max_keywords": 150,
+  "serp_depth": 100,
+  "exclude_terms": ["assisi"]
+}

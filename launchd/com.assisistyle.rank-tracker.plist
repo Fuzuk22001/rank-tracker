@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.assisistyle.rank-tracker</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>REPO_PATH/run.sh</string>
+  </array>
+  <!-- Wednesdays 07:15. SQP for the Sun-Sat week is normally published by then. -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key>
+    <integer>3</integer>
+    <key>Hour</key>
+    <integer>7</integer>
+    <key>Minute</key>
+    <integer>15</integer>
+  </dict>
+  <key>StandardErrorPath</key>
+  <string>REPO_PATH/logs/launchd.err</string>
+  <key>StandardOutPath</key>
+  <string>REPO_PATH/logs/launchd.out</string>
+</dict>
+</plist>
