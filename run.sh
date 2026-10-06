@@ -5,4 +5,4 @@ cd "$(dirname "$0")"
 mkdir -p logs
 # shellcheck disable=SC1091
 source env.sh
-exec /usr/bin/python3 -m rank_tracker run "$@" >> "logs/$(date +%Y-%m-%d).log" 2>&1
+exec /usr/bin/python3 -u -m rank_tracker run "$@" >> "logs/$(date +%Y-%m-%d).log" 2>&1
